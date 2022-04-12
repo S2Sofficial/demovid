@@ -2,7 +2,7 @@
     <html>
     <head>
     <meta charset=utf-8 />
-    <title>Your title</title>
+    <title>FFMPEG DEMONSTRATION BY SWAROOP2SKY</title>
       
     
       <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
@@ -11,6 +11,40 @@
        
     </head>
     <body>
+      <H1> WHAT IS FFMPEG? BRIEF DISCUSSION </H1>
+      <p> ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter.
+
+   ffmpeg reads from an arbitrary number of input "files" (which can be regular files, pipes, network streams, grabbing devices, etc.), specified by the "-i" option, and writes to an arbitrary number of output "files", which are specified by a plain output url. Anything found on the command line which cannot be interpreted as an option is considered to be an output url.
+
+Each input or output url can, in principle, contain any number of streams of different types (video/audio/subtitle/attachment/data). The allowed number and/or types of streams may be limited by the container format. 
+Selecting which streams from which inputs will go into which output is either done automatically or with the "-map" option (see the Stream selection chapter).
+
+   To refer to input files in options, you must use their indices (0-based). E.g.  the first input file is 0, the second is 1, etc.
+ Similarly, streams within a file are referred to by their indices. E.g. "2:3" refers to the fourth stream in the third input file. Also see the Stream specifiers chapter.
+
+   As a general rule, options are applied to
+   the next specified file. Therefore, order is
+   important, and you can have the same option
+   on the command line multiple times. Each
+   occurrence is then applied to the next input
+   or output file.  Exceptions from this rule
+   are the global options (e.g. verbosity
+   level), which should be specified first.
+
+   Do not mix input and output files -- first
+   specify all input files, then all output
+   files. Also do not mix options which belong
+   to different files. All options apply ONLY
+   to the next input or output file and are
+   reset between files. </p>
+
+      <H1> HOW TO INSTALL FFMPEG IN ANDROID IN TERMUX? </H1>
+      <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
+      data-setup='{}'>
+        <source src="https://raw.githubusercontent.com/S2Sofficial/demovid/main/vid/installffmpeg/installffmpeg.m3u8" type="application/x-mpegURL">
+      </video>
+
+      <H1>HOW TO CONVERT MP4 FILES TO M3U8 IN ANDROID IN TERMUX </H1>
       <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
       data-setup='{}'>
         <source src="https://raw.githubusercontent.com/S2Sofficial/demovid/main/vid/convert_mp4tom3u8/convertmp4tom3u8.m3u8" type="application/x-mpegURL">
