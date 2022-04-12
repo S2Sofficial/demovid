@@ -14,6 +14,7 @@
       <p>
       <a href="https://Swaroop2sky.github.io" >
       <img src="https://avatars.githubusercontent.com/u/75105593?s=200&v=4" alt="Logo" >
+      </a>
       </p>
       <H1> WHAT IS FFMPEG? BRIEF DISCUSSION </H1>
       <p> ffmpeg is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter.
@@ -64,7 +65,16 @@ Selecting which streams from which inputs will go into which output is either do
       <a href="https://t.me/Swaroop2sky" >
       <img src="https://termux.com/files/get-it-on-github.png" alt="GitHub Image" >
       </p>
-      
+      <p id="currentTime"></p>
+      <script>  
+      function showTime() {
+      document.getElementById('currentTime').innerHTML = new Date().toUTCString();
+      }
+      showTime();
+      setInterval(function () {
+      showTime();
+      }, 1000);   
+      </script>
     <script>
     var player = videojs('my_video_1');
     player.play();
