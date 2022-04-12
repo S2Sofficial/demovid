@@ -1,12 +1,25 @@
-<html>
-<title>FFMPEG DEMO VIDEO STREAM</title>
-<head>
-<body>
-<video controls controlsList="nodownload" width="640" height="480" poster="https://raw.githubusercontent.com/S2Sofficial/swaroop2sky/main/IMG_20210618_130117.jpg" muted> 
-    <source src="https://raw.githubusercontent.com/S2Sofficial/demovid/main/vid/convert_mp4tom3u8/convertmp4tom3u8.m3u8" type="video/m3u8"> 
-    <!-- fallback for browsers that don't support video tag --> 
-    <a href="https://raw.githubusercontent.com/S2Sofficial/demovid/main/vid/convert_mp4tom3u8/convertmp4tom3u8.m3u8">download video</a> 
-</video>
-</body>
-</head>
-</html>
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset=utf-8 />
+    <title>Your title</title>
+      
+    
+      <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+      <script src="https://unpkg.com/video.js/dist/video.js"></script>
+      <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+       
+    </head>
+    <body>
+      <video id="my_video_1" class="video-js vjs-fluid vjs-default-skin" controls preload="auto"
+      data-setup='{}'>
+        <source src="https://cdn3.wowza.com/1/ejBGVnFIOW9yNlZv/cithRSsv/hls/live/playlist.m3u8" type="application/x-mpegURL">
+      </video>
+      
+    <script>
+    var player = videojs('my_video_1');
+    player.play();
+    </script>
+      
+    </body>
+    </html>
